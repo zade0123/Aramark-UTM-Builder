@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Aramark UTM Builder</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #0f1013;
+  --surface:      #1a1c22;
+  --surface2:     #22252e;
+  --surface3:     #2a2d38;
+  --border:       #2e3140;
+  --border2:      #3a3d50;
+  --red:          #e7212e;
+  --red-dark:     #c01824;
+  --text:         #eeeef3;
+  --text-soft:    #9496ae;
+  --text-muted:   #5c5e72;
+  --radius:       8px;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ── Layout ── */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+.logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--red);
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+.logo-mark svg { stroke: #fff; }
+header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+header p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Meta bar ── */
+.meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 11px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-soft);
+}
+.badge svg { stroke: var(--text-muted); flex-shrink: 0; }
+
+/* ── Sections ── */
+section {
+  margin-bottom: 36px;
+}
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+section p {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+}
+section p:last-child { margin-bottom: 0; }
+section ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 12px;
+}
+section ul li {
+  font-size: 14px;
+  color: var(--text-soft);
+  padding: 6px 0 6px 20px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+section ul li:last-child { border-bottom: none; }
+section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+section ul li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Callout card ── */
+.callout {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.callout strong { color: var(--text); font-weight: 600; }
+.callout.green { border-left: 3px solid #22c55e; }
+.callout.yellow { border-left: 3px solid #f59e0b; }
+.callout.red { border-left: 3px solid var(--red); }
+
+/* ── Table ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.data-table th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+}
+.data-table td {
+  padding: 10px 12px;
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+.data-table tr:nth-child(even) td { background: var(--surface2); }
+.data-table td strong { color: var(--text); font-weight: 600; }
+
+/* ── Footer ── */
+footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+footer a { color: var(--red); text-decoration: none; font-weight: 500; }
+footer a:hover { text-decoration: underline; }
+
+/* ── Links ── */
+a { color: var(--red); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .page { padding: 0 16px 60px; }
+  header { flex-wrap: wrap; }
+  .data-table th, .data-table td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="logo-mark">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Privacy Policy</h1>
+      <p>Aramark UTM Builder — Chrome Extension</p>
+    </div>
+  </header>
+
+  <div class="meta-bar">
+    <span class="badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Effective: March 23, 2026
+    </span>
+    <span class="badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Contact: <a href="mailto:dohan-zade@aramark.com" style="margin-left:3px">dohan-zade@aramark.com</a>
+    </span>
+    <span class="badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Internal Tool — Aramark Only
+    </span>
+  </div>
+
+  <!-- 1. Overview -->
+  <section>
+    <div class="section-label">01 — Overview</div>
+    <h2>About This Extension</h2>
+    <p>The <strong>Aramark UTM Builder</strong> is a Chrome Extension developed and maintained by the Aramark Digital Analytics team. It is an internal productivity tool that helps Aramark employees build standardized UTM-tagged URLs for marketing campaign tracking.</p>
+    <p>This privacy policy describes what information is collected when you use the extension, how that information is used, and your rights with respect to your data. By installing or using this extension, you agree to the practices described in this policy.</p>
+    <div class="callout green">
+      <strong>Internal use only.</strong> This extension is distributed privately to Aramark employees and is not available to the general public. All data collected stays within Aramark-controlled systems.
+    </div>
+  </section>
+
+  <!-- 2. Permissions -->
+  <section>
+    <div class="section-label">02 — Permissions Used</div>
+    <h2>Chrome Permissions</h2>
+    <p>This extension requests the following Chrome permissions. Each is used solely for the features described below and for no other purpose.</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why It's Needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>sidePanel</strong></td>
+          <td>Displays the UTM Builder interface in Chrome's side panel.</td>
+        </tr>
+        <tr>
+          <td><strong>tabs</strong></td>
+          <td>Reads the URL of the currently active tab when you click "grab current page," so it can auto-fill the Base URL field. No tab data is stored or transmitted.</td>
+        </tr>
+        <tr>
+          <td><strong>storage</strong></td>
+          <td>Stores a randomly generated anonymous client ID in local browser storage. This ID contains no personal information and is used only for anonymous usage analytics.</td>
+        </tr>
+        <tr>
+          <td><strong>contextMenus</strong></td>
+          <td>Adds an "Open UTM Builder" item to the right-click context menu for quick access.</td>
+        </tr>
+        <tr>
+          <td><strong>Host: script.google.com</strong></td>
+          <td>Communicates with the Aramark Google Apps Script backend to save UTM entries and retrieve shared dropdown values. No data is sent to any non-Aramark endpoint through this permission.</td>
+        </tr>
+        <tr>
+          <td><strong>Host: google-analytics.com</strong></td>
+          <td>Sends anonymous usage events to Google Analytics 4 via the Measurement Protocol. See Section 4 for details.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. Data Collected -->
+  <section>
+    <div class="section-label">03 — Data Collected</div>
+    <h2>What We Collect</h2>
+    <p>We collect only the minimum data necessary to operate the tool and understand overall usage. We do <strong>not</strong> collect any automatically inferred personal data, track your browsing history, or access any content outside of the specific interactions described below.</p>
+
+    <ul>
+      <li>
+        <strong>UTM Form Data</strong> — When you save a UTM link, the following fields are written to a private Aramark-controlled Google Sheet: destination URL, UTM campaign parameters (source, medium, campaign, content, term), Author Name (as entered by you), Line of Business, and Use Description. This data is used solely for internal campaign taxonomy governance and is accessible only to the Digital Analytics team.
+      </li>
+      <li>
+        <strong>Author Name &amp; Line of Business</strong> — Included in anonymous usage events sent to Google Analytics 4 (see Section 4) to understand adoption across teams. This is the same value you type into the form — no identity resolution or cross-referencing is performed.
+      </li>
+      <li>
+        <strong>Anonymous Client ID</strong> — A randomly generated identifier (UUID) stored in your browser's local storage. It does not contain your name, email, Aramark ID, or any other identifying information. It is used only to de-duplicate GA4 events across sessions.
+      </li>
+      <li>
+        <strong>Current Tab URL</strong> — Read momentarily when you click the "grab current page" button to auto-fill the Base URL input. This URL is never stored, logged, or transmitted anywhere.
+      </li>
+    </ul>
+
+    <div class="callout yellow">
+      <strong>We never collect:</strong> your Aramark login credentials, email address, full name, IP address, device identifiers, browsing history, or any data from pages you visit outside of the explicit "grab current page" action.
+    </div>
+  </section>
+
+  <!-- 4. Analytics -->
+  <section>
+    <div class="section-label">04 — Analytics</div>
+    <h2>Google Analytics 4 Usage</h2>
+    <p>This extension uses <strong>Google Analytics 4 (GA4)</strong> via the Measurement Protocol to collect anonymous, aggregated usage statistics. Events are sent directly from the extension to Google's servers using a server-side API secret — no GA4 JavaScript library is loaded or injected into any webpage you visit.</p>
+    <p>The following events are tracked:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>When It Fires</th>
+          <th>Data Sent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>page_view</strong></td>
+          <td>When the side panel is opened.</td>
+          <td>Anonymous client ID only.</td>
+        </tr>
+        <tr>
+          <td><strong>utm_saved</strong></td>
+          <td>When a UTM link is successfully saved.</td>
+          <td>Author Name, Line of Business, anonymous client ID.</td>
+        </tr>
+        <tr>
+          <td><strong>url_copied_from_history</strong></td>
+          <td>When a URL is copied from the history tab.</td>
+          <td>Anonymous client ID only.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>GA4 data is processed by Google LLC in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. Analytics data is used exclusively by the Aramark Digital Analytics team to improve the extension. No GA4 data is shared with any third party beyond Google as the analytics processor.</p>
+  </section>
+
+  <!-- 5. Data Sharing -->
+  <section>
+    <div class="section-label">05 — Data Sharing</div>
+    <h2>How We Share Data</h2>
+    <div class="callout red">
+      <strong>We do not sell, rent, or trade your data.</strong> Data collected by this extension is used solely for internal Aramark purposes.
+    </div>
+    <p>Data is shared only as follows:</p>
+    <ul>
+      <li><strong>Google LLC (Analytics Processor)</strong> — Anonymous usage events are transmitted to Google Analytics 4. Google acts as a data processor under the terms of their Data Processing Agreement with Aramark.</li>
+      <li><strong>Aramark Digital Analytics Team</strong> — UTM entries saved to the Google Sheet are accessible only to authorized members of the Digital Analytics team within Aramark's Google Workspace environment.</li>
+    </ul>
+    <p>No data is shared with any other third parties, advertisers, data brokers, or external organizations.</p>
+  </section>
+
+  <!-- 6. Data Retention -->
+  <section>
+    <div class="section-label">06 — Data Retention</div>
+    <h2>How Long We Keep Data</h2>
+    <ul>
+      <li><strong>UTM Entries (Google Sheet)</strong> — Retained indefinitely for taxonomy governance and historical reporting. Entries may be deleted upon request.</li>
+      <li><strong>GA4 Analytics Events</strong> — Retained for 14 months per GA4's default data retention setting, after which they are automatically deleted by Google.</li>
+      <li><strong>Anonymous Client ID (browser storage)</strong> — Stored locally in your browser until the extension is uninstalled or browser storage is cleared. This data never leaves your device except as associated with GA4 events.</li>
+    </ul>
+  </section>
+
+  <!-- 7. Security -->
+  <section>
+    <div class="section-label">07 — Security</div>
+    <h2>Data Security</h2>
+    <p>All data transmissions from this extension use HTTPS. The backend Google Apps Script endpoint is access-controlled within Google's infrastructure. The GA4 Measurement Protocol API secret is embedded in the extension but does not grant access to any personally identifiable data — it is a write-only telemetry credential.</p>
+    <p>The Google Sheet storing UTM entries is accessible only to authorized Aramark personnel via Google Workspace permissions. No public-facing access is provided.</p>
+  </section>
+
+  <!-- 8. User Rights -->
+  <section>
+    <div class="section-label">08 — Your Rights</div>
+    <h2>Your Rights &amp; Choices</h2>
+    <ul>
+      <li><strong>Access &amp; Deletion</strong> — You may request access to or deletion of any UTM entries associated with your Author Name by contacting the Digital Analytics team at <a href="mailto:dohan-zade@aramark.com">dohan-zade@aramark.com</a>.</li>
+      <li><strong>Uninstall</strong> — Uninstalling the extension immediately stops all data collection. Your local anonymous client ID is removed when browser storage is cleared.</li>
+      <li><strong>Analytics Opt-out</strong> — As this is an internal tool, analytics cannot be disabled individually; however, you may contact the Digital Analytics team to discuss your concerns.</li>
+    </ul>
+  </section>
+
+  <!-- 9. Changes -->
+  <section>
+    <div class="section-label">09 — Policy Changes</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. The effective date at the top of this page will reflect the date of the most recent revision. Continued use of the extension after a policy update constitutes acceptance of the revised policy. For significant changes, we will notify users via internal Aramark communications channels.</p>
+  </section>
+
+  <!-- 10. Contact -->
+  <section>
+    <div class="section-label">10 — Contact</div>
+    <h2>Contact Us</h2>
+    <p>If you have questions, concerns, or requests related to this privacy policy or the data practices of the Aramark UTM Builder extension, please contact:</p>
+    <div class="callout">
+      <strong>Aramark Digital Analytics Team</strong><br>
+      Email: <a href="mailto:dohan-zade@aramark.com">dohan-zade@aramark.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Aramark Corporation. All rights reserved.</span>
+    <span>Aramark UTM Builder — Internal Tool</span>
+  </footer>
+
+</div>
+</body>
+</html>
